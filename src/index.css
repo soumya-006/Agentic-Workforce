@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-darkBg: #090d16;
+  --color-darkCard: #111827;
+  --color-darkBorder: #1f2937;
+  
+  --color-brand-50: #f0f7ff;
+  --color-brand-100: #e0effe;
+  --color-brand-200: #bae2fd;
+  --color-brand-300: #7cc8fc;
+  --color-brand-400: #38abf9;
+  --color-brand-500: #0e90eb;
+  --color-brand-600: #0271c7;
+  --color-brand-700: #035a9e;
+  --color-brand-800: #084c83;
+  --color-brand-900: #0c406d;
+  --color-brand-950: #082949;
+}
+
+body {
+  background-color: #090d16;
+  color: #f3f4f6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbar for dark premium look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Glassmorphism card utility */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Pulse animation for active steps */
+@keyframes soft-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 2s infinite ease-in-out;
+}
